@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  flex: 1;
+  background-color: #2c3e50;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left h1 {
+  color: white;
+  border: none;
+}
+
+.left p {
+  color: #bdc3c7;
+}
+
+.right {
+  flex: 1;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Georgia, serif;
+  margin: 40px;
+}
+
+h1 {
+  color: #000000;
+  border: 2px solid black;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #e74c3c;
+}
+
+p {
+  color: #555555;
+  font-size: 20px;
+}
+
+a {
+  color: #3498db;
+}
+
+img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+}
+
+.foto-profil {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  display: block;
+  margin: 0 auto 15px;
+  object-fit: cover;
+}
+
+.about-me {
+  font-size: 14px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+h1 {
+    font-size: 20px;
+  }
+  .left {
+    text-align: center;
+  }
+}
+
+.skills span {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills span:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+a {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #125886;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeIn 0.8s ease;
+}
+
+.left {
+  animation: fadeIn 0.8s ease 0.2s both;
+}
+
+.right {
+  animation: fadeIn 0.8s ease 0.4s both;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.foto-profil {
+  animation: zoomIn 0.5s ease 0.6s both;
+}
